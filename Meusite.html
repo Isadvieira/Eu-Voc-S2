@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Amor - 8 Meses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.5em;
+            max-width: 600px;
+            margin: auto;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .legend {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        .counter {
+            font-size: 2em;
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .polaroid {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .polaroid img {
+            max-width: 250px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meu Amor, Leonardo! 💖</h1>
+        <p>Em cada dia que passa, meu amor por você só cresce. Desde o momento que você entrou na minha vida, tudo ganhou um novo significado. Cada gesto, cada palavra sua é um presente para o meu coração. Você é o meu refúgio, a minha paz, e, ao mesmo tempo, a minha aventura mais incrível. Nossos 8 meses juntos têm sido uma jornada mágica, onde tudo é mais bonito, mais intenso e mais cheio de amor. 💫</p>
+        
+        <div class="legend">
+            <h2>A Lenda do Nosso Amor</h2>
+            <p>Os deuses se encarregaram de entrelaçar nossos destinos, criando uma paixão que arde como fogo e é imortal, como o amor de Psiquê e Eros. Em cada palavra que você diz, em cada olhar, em cada toque, sinto a grandeza do nosso amor. Você é o meu companheiro, meu amor e meu melhor amigo. Sua teimosia charmosa, seu cuidado imensurável, seus gestos inesperados, como os chocolates e flores, são a prova de que o amor verdadeiro existe e se manifesta em cada detalhe. Não há ninguém mais perfeito para mim, e nossa história é uma eterna partida de xadrez, onde cada movimento nos aproxima ainda mais do nosso destino, que é um só: sermos felizes, juntos, para sempre.</p>
+        </div>
+        
+        <div class="counter">
+            <h2>Nosso Tempo Juntos</h2>
+            <p>Já se passaram <span id="days">0</span> dias, <span id="hours">0</span> horas, <span id="minutes">0</span> minutos desde o momento que decidimos que seríamos um só. O nosso amor começou no dia 12 de junho de 2024, às 00:00, e a cada segundo, mais uma história é escrita em nossos corações.</p>
+        </div>
+
+        <div>
+            <h2>Algumas Memórias Nossas</h2>
+            <div class="polaroid">
+                <img src="foto1.jpg" alt="Foto 1">
+                <p>Nosso primeiro encontro - o começo de tudo.</p>
+            </div>
+            <div class="polaroid">
+                <img src="foto2.jpg" alt="Foto 2">
+                <p>Nosso passeio juntos - risadas e mais risadas.</p>
+            </div>
+            <div class="polaroid">
+                <img src="foto3.jpg" alt="Foto 3">
+                <p>Nosso momento mais romântico - juntos, para sempre.</p>
+            </div>
+        </div>
+
+        <audio controls autoplay>
+            <source src="https://example.com/papoulas-thiago-opropio.mp3" type="audio/mpeg">
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <script>
+        function updateTime() {
+            const startDate = new Date("2024-06-12T00:00:00Z");
+            const now = new Date();
+            const diff = now - startDate;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+            document.getElementById("minutes").textContent = minutes;
+        }
+
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
